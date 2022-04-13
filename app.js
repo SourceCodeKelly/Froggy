@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     const squares = document.querySelectorAll('.grid div');
     const time = document.querySelector('#time');
     const score = document.querySelector('#score');
     const startBtn = document.querySelector('#start');
-    const carLeft = document.querySelector('.car-left')
-    const carRight = document.querySelector('.car-right')
-    const logLeft = document.querySelector('.log-left')
-    const logRight = document.querySelector('.log-right')
+    const carLeft = document.querySelectorAll('.car-left')
+    const carRight = document.querySelectorAll('.car-right')
+    const logLeft = document.querySelectorAll('.log-left')
+    const logRight = document.querySelectorAll('.log-right')
     const width = 9;
     let currentIndex = 76;
     let currentTime = 20;
@@ -169,4 +169,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-})
+    function movePieces() {
+        currentTime--;
+        time.textContent = currentTime;
+        moveCars()
+        moveLogs()
+        moveWithLogLeft()
+        moveWithLogRight
+        lose()
+    }
+
+    //Start/Pause
+    startBtn.addEventListener('click', () => {
+        if(timer) {
+            clearInterval(timer)
+        } else {
+            timer = setInterval(movePieces, 1000);
+            document.addEventListener('keyup', moveFroggy)
+        }
+    })
+
