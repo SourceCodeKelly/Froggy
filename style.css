@@ -13,7 +13,7 @@
 
 
 .start-line {
-    background-color: goldenrod;
+    background-color: royalblue;
 }
 
 .finish-line {
@@ -29,3 +29,14 @@
     background-color: black;
 }
 
+.c2, .c3 {
+    background-color: red;
+}
+
+.l1, .l2, .l3 {
+    background-color: brown;
+}
+
+.l4, .l5 {
+    background-color: aqua;
+}
