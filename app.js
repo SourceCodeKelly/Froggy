@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logRight = document.querySelector('.log-right')
     const width = 9;
     let currentIndex = 76;
+    let currentTime = 20;
     let timer;
 
     //Place Froggy at Start Point
@@ -131,5 +132,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 break
         }
     }
+
+    //Win rules
+    function win() {
+        if (squares[4].classList.contains('froggy')) {
+            score.innerHTML = 'YOU WIN!';
+            squares[currentIndex].classList.remove('froggy');
+            clearInterval(timer);
+            document.removeEventListener('keyup', moveFroggy);
+        }
+    }
+    //Lose rule
+    function lose() {
+        if ((time == 0) || (squares[currentIndex].classList.contains('c1')) || (squares[currentIndex].classList.contains('l5')) || (squares[currentIndex].classList.contains('l4'))) {
+            score.innerHTML = 'YOU LOSE!';
+            squares[currentIndex].classList.remove('froggy');
+            clearInterval(timer);
+            document.removeEventListener('keyup', moveFroggy);
+        }
+    }
+
 
 })
