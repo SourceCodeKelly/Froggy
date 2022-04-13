@@ -152,5 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //Move Froggy with left logs
+    function moveWithLogLeft() {
+        if (currentIndex >= 27 && currentIndex < 35) {
+            squares[currentIndex].classList.remove('froggy');
+            currentIndex += 1;
+            squares[currentIndex].classList.add('froggy')
+        }
+    }
+    //Move Froggy with right logs
+    function moveWithLogRight() {
+        if (currentIndex > 18 && currentIndex <= 26) {
+            squares[currentIndex].classList.remove('froggy');
+            currentIndex -= 1;
+            squares[currentIndex].classList.add('froggy')
+        }
+    }
 
 })
