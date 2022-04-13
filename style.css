@@ -11,8 +11,9 @@
     width: 60px;
 }
 
-.frog {
+.froggy {
     background-color: rgba(54, 182, 0, 0.879);
+    border-radius: 20px;
 }
 
 .start-line {
