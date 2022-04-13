@@ -11,10 +11,6 @@
     width: 60px;
 }
 
-.froggy {
-    background-color: rgba(54, 182, 0, 0.879);
-    border-radius: 20px;
-}
 
 .start-line {
     background-color: goldenrod;
@@ -23,3 +19,13 @@
 .finish-line {
     background-color: red;
 }
+
+.froggy {
+    background-color: rgba(54, 182, 0, 0.879);
+    border-radius: 20px;
+}
+
+.c1 {
+    background-color: black;
+}
+
